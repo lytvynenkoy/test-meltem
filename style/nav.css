@@ -1,0 +1,212 @@
+#nav {
+    position: fixed;
+    top: 0;
+
+    z-index: 1;
+    width: 100%;
+    background-color: #fff;
+}
+
+.nav-mobile {display: none}
+
+.nav-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2vw 0;
+}
+
+.menu-wrapper ul, .callback-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2.7vw;
+}
+
+.menu-wrapper li, .list-wrapper {list-style-type: none;transition: border-color 0.3s ease-in-out;}
+.menu-wrapper a, .list-wrapper a {text-decoration: none; color: #000;transition: border-color 0.3s ease-in-out;}
+.menu-wrapper a:hover, .list-wrapper a:hover {color: #859BA6;}
+
+.callback-number {font-weight: 600;}
+
+.lang-switch-mobile {
+    display: flex;
+    align-items: center;
+}
+
+.lang-switch-mobile div {
+    padding:.4vw;
+    font-size: .8vw;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.ua {
+    background-color: #859BA6;
+    color: #ffffff;
+}
+.ru {
+    color: #859BA6;
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav-mobile-header {
+        z-index: 10000;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 3vw;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 1.9vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger-menu_nav ul {
+        gap: 5.2vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-wrapper li {
+        text-align: center;
+    }
+
+    .lang-switch-mobile {
+        margin-top: 9.1vw
+    }
+
+    .callback-number {
+        font-size: 2.3vw;
+        margin-top: 5.2vw
+    }
+
+    .burger-menu_button {
+        top: 1.5vw;
+        right: 1.5vw;
+        z-index: 30;
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    .burger-menu_button:hover .burger-menu_lines {
+        filter: brightness(0.7);
+    }
+
+    .burger-menu_button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .burger-menu_nav {
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        overflow-y: auto;
+        right: -100%;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -o-transition: 0.8s;
+        transition: 0.8s;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 9.1vw;
+
+    }
+
+    .burger-menu_active .burger-menu_nav {
+        right: 0;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    .lang-switch-mobile div {
+        padding: 1.2vw;
+        font-size: 1.3vw;
+        font-weight: 600;
+        border-radius: 5px;
+    }
+
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 5.2vw;
+        height: 4.1vw;
+        position: absolute;
+        top: -0.9vw;
+        left: -0.6vw;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 4.2vw;
+        height: .5vw;
+        margin-bottom: .6vw;
+        background: #859BA6;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: .5vw 0;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0 100%;
+    }
+
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #859BA6;
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+}
