@@ -59,7 +59,7 @@
         display: block;
     }
 
-    .nav-mobile-header {
+    .nav-mobile-main {
         z-index: 10000;
         position: relative;
         display: flex;

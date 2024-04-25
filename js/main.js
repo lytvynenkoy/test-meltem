@@ -120,4 +120,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     });
 
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+    });
+
 })

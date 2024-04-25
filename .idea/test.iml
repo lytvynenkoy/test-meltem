@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery-input-mask-phone-number" level="application" />
     <orderEntry type="library" name="lottie-web" level="application" />
+    <orderEntry type="library" name="swiper" level="application" />
   </component>
 </module>
